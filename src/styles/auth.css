@@ -1,0 +1,290 @@
+:root {
+  --color-background: #242424;
+  --color-text: #ffffff;
+  --color-iara-blue: #3EA8DA;
+  --color-iara-yellow: #E2FD4A;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input-bg: #1a1a1a;
+  --color-input-border: rgba(255, 255, 255, 0.12);
+  --color-input-border-focus: rgba(62, 168, 218, 0.6);
+  --color-placeholder: rgba(255, 255, 255, 0.25);
+  --color-muted: rgba(255, 255, 255, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Geist", sans-serif;
+}
+
+/* ─── HEADER ─── */
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-inline: 50px;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 var(--color-border);
+  background-color: var(--color-background);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-iara-blue);
+  font-family: "Geist Mono", monospace;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.logo img {
+  background-color: transparent;
+}
+
+.logo span {
+  font-family: "Geist Mono", monospace;
+}
+
+/* ─── MAIN CENTRALIZADO ─── */
+.auth-main {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background-color: var(--color-background);
+}
+
+/* ─── CARD DO FORMULÁRIO ─── */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ─── CABEÇALHO DO FORM ─── */
+.auth-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-label {
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-iara-yellow);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.auth-title {
+  font-family: "Geist Mono", monospace;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--color-text);
+}
+
+/* ─── FORMULÁRIO ─── */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─── GRUPO DE CAMPO ─── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+  font-family: "Geist", sans-serif;
+}
+
+.form-group input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.form-group input:focus {
+  border-color: var(--color-input-border-focus);
+  box-shadow: 0 0 0 3px rgba(62, 168, 218, 0.08);
+}
+
+/* ─── ESTADOS DE VALIDAÇÃO ─── */
+.input-error {
+  border-color: #e05c5c !important;
+  box-shadow: 0 0 0 3px rgba(224, 92, 92, 0.1) !important;
+}
+
+.input-success {
+  border-color: #4caf7d !important;
+  box-shadow: 0 0 0 3px rgba(76, 175, 125, 0.08) !important;
+}
+
+.field-feedback {
+  font-size: 12px;
+  margin-top: 2px;
+  min-height: 16px;
+}
+
+.field-error {
+  color: #e05c5c;
+}
+
+.field-success {
+  color: #4caf7d;
+}
+
+/* ─── LINK ESQUECI SENHA ─── */
+.form-link-small {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-decoration: none;
+  align-self: flex-end;
+  transition: color 0.15s;
+}
+
+.form-link-small:hover {
+  color: var(--color-text);
+}
+
+/* ─── FIELDSET GÊNEROS ─── */
+.form-fieldset {
+  border: 1px solid var(--color-input-border);
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-fieldset legend {
+  font-size: 13px;
+  color: var(--color-muted);
+  padding-inline: 6px;
+}
+
+.form-optional {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+/* ─── CHECKBOX ─── */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: 3px;
+  accent-color: var(--color-iara-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ─── TERMOS ─── */
+.form-terms {
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.form-terms span {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+/* ─── LINKS INLINE ─── */
+.form-link {
+  color: var(--color-iara-blue);
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.form-link:hover {
+  opacity: 0.8;
+}
+
+/* ─── BOTÃO PRINCIPAL ─── */
+.btn-primary {
+  width: 100%;
+  background-color: var(--color-iara-blue);
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: "Geist Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: opacity 0.15s;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-primary:active {
+  opacity: 0.75;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ─── RODAPÉ DO CARD ─── */
+.auth-footer-text {
+  font-size: 13px;
+  color: var(--color-muted);
+  text-align: center;
+}
