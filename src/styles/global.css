@@ -1,0 +1,361 @@
+/* ── Variáveis da paleta Iara Games ── */
+:root {
+  --azul-arara:   #009AFF;
+  --amarelo-iara: #FEA116;
+  --verde-iara:   #E2FD4A;
+  --bg-iara:      #242424;
+  --color-text:   #ffffff;
+  --color-muted:  rgba(255, 255, 255, 0.5);
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-iara);
+  color: var(--color-text);
+  font-family: "Outfit", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ─── NAVBAR ─── */
+.navbar {
+  background-color: var(--bg-iara);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--azul-arara);
+  font-family: "Michroma", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Outfit", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 20px;
+  transition: color 0.15s;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+}
+
+.btn-iara-login {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  background-color: var(--azul-arara);
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: opacity 0.15s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-iara-login:hover {
+  opacity: 0.85;
+}
+
+/* ─── CONTAINER ─── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 24px;
+  width: 100%;
+}
+
+/* ─── FOOTER ─── */
+.site-footer {
+  margin-top: 80px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-inner {
+  padding: 48px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--color-muted);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.footer-col-title {
+  font-family: "Michroma", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 300;
+  transition: color 0.15s;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: var(--color-text);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding: 20px 24px;
+}
+
+.footer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
+
+/* ─── SEÇÕES DE JOGOS ─── */
+.section-games {
+  margin-top: 56px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: "Michroma", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-link {
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--amarelo-iara);
+  text-transform: uppercase;
+  transition: opacity 0.15s;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  opacity: 0.75;
+}
+
+/* ─── GRID DE JOGOS ─── */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) { .games-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px)  { .games-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px)  { .games-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ─── CARD DE JOGO ─── */
+.game-card {
+  cursor: pointer;
+}
+
+.game-card a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.game-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 154, 255, 0.2);
+}
+
+.game-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.game-price {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.game-price.free {
+  color: var(--verde-iara);
+  font-weight: 500;
+}
+
+/* ─── ECO BADGE ─── */
+.eco-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(226, 253, 74, 0.12);
+  color: var(--verde-iara);
+  font-family: "Outfit", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(226, 253, 74, 0.25);
+  width: fit-content;
+}
+
+/* ─── CATEGORIAS ─── */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) { .categories-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px) { .categories-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.category-card {
+  height: 120px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, outline 0.15s;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+}
+
+.category-card.active {
+  outline: 3px solid var(--color-text);
+  outline-offset: 3px;
+  transform: translateY(-3px);
+}
+
+.category-card span {
+  font-family: "Michroma", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── RESPONSIVIDADE FOOTER ─── */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
